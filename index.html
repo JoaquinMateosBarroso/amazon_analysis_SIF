@@ -15108,24 +15108,87 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h1 id="Esto-es-c%C3%B3digo-auxiliar-para-seguir-el-siguiente-proceso-de-Business-Inteligence:">Esto es c&#243;digo auxiliar para seguir el siguiente proceso de Business Inteligence:<a class="anchor-link" href="#Esto-es-c%C3%B3digo-auxiliar-para-seguir-el-siguiente-proceso-de-Business-Inteligence:">&#182;</a></h1><img src='images/proceso.png'>
 
 </div>
 </div>
 </div>
-</div><div id="cell-id=b1046697" class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs jp-mod-noInput ">
+</div>
+<div id="cell-id=a308cfc1" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Puedes obtener <a href='https://www.kaggle.com/datasets/lokeshparab/amazon-products-dataset'>aquí</a> la fuente de datos, deberías añadirla en una carpeta data en este mismo directorio para poder extraer los datos con este notebook.</p>
 
-</div><div id="cell-id=cd539a32" class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs jp-mod-noInput ">
+</div>
+</div>
+</div>
+</div><div id="cell-id=b1046697" class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</pre></div>
 
-</div><div id="cell-id=b7110873" class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput ">
+     </div>
+</div>
+</div>
+</div>
+
+</div><div id="cell-id=cd539a32" class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;data/Amazon-Products.csv&quot;</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;image&#39;</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;link&#39;</span><span class="p">)</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;name&#39;</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div id="cell-id=b7110873" class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
 
 <div class="jp-Cell-outputWrapper">
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
 
+
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[3]:</div>
+
+
 
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
 <div>
@@ -15220,14 +15283,34 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 
 </div>
 
-</div><div id="cell-id=41f8bc9e" class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput ">
+</div><div id="cell-id=41f8bc9e" class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">null_percentages</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="mi">100</span> <span class="o">*</span> <span class="n">df</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">))</span><span class="o">.</span><span class="n">transpose</span><span class="p">()</span>
+<span class="n">null_percentages</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
 
 <div class="jp-Cell-outputWrapper">
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
 
+
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[4]:</div>
+
+
 
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
 <div>
@@ -15282,7 +15365,8 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Tenemos más de un 31% de ragings a null.<br>
 Consultando el kaggle original, vemos que esto indica que no ha habido ningún rating de ese producto.<br></p>
 
@@ -15294,7 +15378,8 @@ Consultando el kaggle original, vemos que esto indica que no ha habido ningún r
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>De aquí ya extraemos la conclusión de que en torno al 30% de los productos de amazon no llegan a tener unas ventas significativas y se quedan en un intento muy vago sin ni siquiera una opinión.</p>
 
 </div>
@@ -15305,21 +15390,43 @@ Consultando el kaggle original, vemos que esto indica que no ha habido ningún r
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Así sabemos que no estamos perdiendo información que nos interese si eliminamos todas las filas que tengan el rating a null.<br>
 Tras hacerlo, tenemos la siguiente tabla de porcentajes nulos:</p>
 
 </div>
 </div>
 </div>
-</div><div id="cell-id=cf92d960" class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput ">
+</div><div id="cell-id=cf92d960" class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">null_percentages</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="mi">100</span> <span class="o">*</span> <span class="n">df</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">))</span><span class="o">.</span><span class="n">transpose</span><span class="p">()</span>
+<span class="n">null_percentages</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
 
 <div class="jp-Cell-outputWrapper">
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
 
+
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[5]:</div>
+
+
 
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
 <div>
@@ -15374,20 +15481,72 @@ Tras hacerlo, tenemos la siguiente tabla de porcentajes nulos:</p>
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Ahora damos el tipo correspondiente a cada columna</p>
 
 </div>
 </div>
 </div>
-</div><div id="cell-id=e155648d" class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput ">
+</div><div id="cell-id=e155648d" class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Dar formato de número a los ratings y no_of_ratings</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;no_of_ratings&#39;</span><span class="p">,</span> <span class="s1">&#39;discount_price&#39;</span><span class="p">,</span> <span class="s1">&#39;actual_price&#39;</span><span class="p">]:</span>
+    <span class="n">df</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">))</span>
+    
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;no_of_ratings&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;no_of_ratings&#39;</span><span class="p">],</span> <span class="n">errors</span><span class="o">=</span><span class="s1">&#39;coerce&#39;</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;no_of_ratings&#39;</span><span class="p">],</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;ratings&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;ratings&#39;</span><span class="p">],</span> <span class="n">errors</span><span class="o">=</span><span class="s1">&#39;coerce&#39;</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;ratings&#39;</span><span class="p">],</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    
+
+
+<span class="c1"># # Convertimos de rupias a dólares</span>
+<span class="c1"># # A veces se cae el servidor; abajo dejo la conversión en el momento de la realización de este notebook</span>
+<span class="c1"># from forex_python.converter import CurrencyRates</span>
+
+<span class="c1"># c = CurrencyRates()</span>
+<span class="c1"># tasa_conversion = c.get_rate(&#39;INR&#39;, &#39;USD&#39;)</span>
+
+<span class="n">tasa_conversion</span> <span class="o">=</span> <span class="mf">0.121772</span>
+
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;discount_price&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;discount_price&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span> <span class="c1"># quitamos el símbolo de rupias</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;discount_price&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;discount_price&#39;</span><span class="p">],</span> <span class="n">errors</span><span class="o">=</span><span class="s1">&#39;coerce&#39;</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;discount_price&#39;</span><span class="p">],</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;discount_price&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;discount_price&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="n">tasa_conversion</span>
+
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;actual_price&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;actual_price&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span> <span class="c1"># quitamos el símbolo de rupias</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;actual_price&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;actual_price&#39;</span><span class="p">],</span> <span class="n">errors</span><span class="o">=</span><span class="s1">&#39;coerce&#39;</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;actual_price&#39;</span><span class="p">],</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;actual_price&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;actual_price&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="n">tasa_conversion</span>
+
+
+
+<span class="n">df</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
 
 <div class="jp-Cell-outputWrapper">
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
 
+
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[6]:</div>
+
+
 
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
 <div>
@@ -15417,59 +15576,59 @@ Tras hacerlo, tenemos la siguiente tabla de porcentajes nulos:</p>
   <tbody>
     <tr>
       <th>count</th>
-      <td>112603.000000</td>
-      <td>112603.000000</td>
-      <td>112603.000000</td>
-      <td>112603.000000</td>
+      <td>334963.000000</td>
+      <td>334963.000000</td>
+      <td>334963.000000</td>
+      <td>3.349630e+05</td>
     </tr>
     <tr>
       <th>mean</th>
-      <td>3.775243</td>
-      <td>88.874231</td>
-      <td>4.510466</td>
-      <td>8.800893</td>
+      <td>3.814368</td>
+      <td>853.864540</td>
+      <td>214.198090</td>
+      <td>4.017081e+03</td>
     </tr>
     <tr>
       <th>std</th>
-      <td>0.769010</td>
-      <td>169.951679</td>
-      <td>2.045108</td>
-      <td>3.057014</td>
+      <td>0.754169</td>
+      <td>8890.977903</td>
+      <td>778.668253</td>
+      <td>2.083015e+06</td>
     </tr>
     <tr>
       <th>min</th>
       <td>1.000000</td>
       <td>1.000000</td>
-      <td>0.097893</td>
-      <td>0.122367</td>
+      <td>0.974176</td>
+      <td>1.217720e+00</td>
     </tr>
     <tr>
       <th>25%</th>
-      <td>3.400000</td>
+      <td>3.500000</td>
       <td>4.000000</td>
-      <td>3.046933</td>
-      <td>6.106102</td>
+      <td>43.716148</td>
+      <td>1.095948e+02</td>
     </tr>
     <tr>
       <th>50%</th>
       <td>3.900000</td>
-      <td>16.000000</td>
-      <td>4.221654</td>
-      <td>9.165271</td>
+      <td>20.000000</td>
+      <td>72.941428</td>
+      <td>1.825362e+02</td>
     </tr>
     <tr>
       <th>75%</th>
       <td>4.200000</td>
-      <td>80.000000</td>
-      <td>5.812421</td>
-      <td>12.224440</td>
+      <td>131.000000</td>
+      <td>146.004628</td>
+      <td>3.408398e+02</td>
     </tr>
     <tr>
       <th>max</th>
       <td>5.000000</td>
-      <td>999.000000</td>
-      <td>12.212203</td>
-      <td>12.236554</td>
+      <td>589547.000000</td>
+      <td>152213.782280</td>
+      <td>1.205543e+09</td>
     </tr>
   </tbody>
 </table>
@@ -15487,20 +15646,40 @@ Tras hacerlo, tenemos la siguiente tabla de porcentajes nulos:</p>
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Tras borrar todas las columnas nos quedamos con algo más de 100k; para un fin educativo es suficiente</p>
 
 </div>
 </div>
 </div>
-</div><div id="cell-id=cbe0b25a" class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput ">
+</div><div id="cell-id=cbe0b25a" class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
 
 <div class="jp-Cell-outputWrapper">
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
 
+
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[7]:</div>
+
+
 
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
 <div>
@@ -15540,49 +15719,49 @@ Tras hacerlo, tenemos la siguiente tabla de porcentajes nulos:</p>
   </thead>
   <tbody>
     <tr>
-      <th>AC Stand/Heavy Duty Air Conditioner Outdoor Unit Mounting Bracket</th>
+      <th>Lloyd 1.5 Ton 3 Star Inverter Split Ac (5 In 1 Convertible, Copper, Anti-Viral + Pm 2.5 Filter, 2023 Model, White, Gls18I3...</th>
       <td>appliances</td>
       <td>Air Conditioners</td>
-      <td>5.0</td>
-      <td>2.0</td>
-      <td>7.329769</td>
-      <td>12.224440</td>
+      <td>4.2</td>
+      <td>2255.0</td>
+      <td>4018.354228</td>
+      <td>7183.33028</td>
     </tr>
     <tr>
-      <th>RISARYA H20R1203 IGBT 1PCS POWER TRANSISTOR 20A 1200V REVERSE CONDUCTING HEATING AND WIDELY USED IN INDUCTION COOKER T0247...</th>
+      <th>LG 1.5 Ton 5 Star AI DUAL Inverter Split AC (Copper, Super Convertible 6-in-1 Cooling, HD Filter with Anti-Virus Protectio...</th>
+      <td>appliances</td>
+      <td>Air Conditioners</td>
+      <td>4.2</td>
+      <td>2948.0</td>
+      <td>5661.180280</td>
+      <td>9253.45428</td>
+    </tr>
+    <tr>
+      <th>LG 1 Ton 4 Star Ai Dual Inverter Split Ac (Copper, Super Convertible 6-In-1 Cooling, Hd Filter With Anti Virus Protection,...</th>
+      <td>appliances</td>
+      <td>Air Conditioners</td>
+      <td>4.2</td>
+      <td>1206.0</td>
+      <td>4199.916280</td>
+      <td>7548.64628</td>
+    </tr>
+    <tr>
+      <th>LG 1.5 Ton 3 Star AI DUAL Inverter Split AC (Copper, Super Convertible 6-in-1 Cooling, HD Filter with Anti-Virus Protectio...</th>
       <td>appliances</td>
       <td>Air Conditioners</td>
       <td>4.0</td>
-      <td>4.0</td>
-      <td>2.435099</td>
-      <td>6.106102</td>
+      <td>69.0</td>
+      <td>4626.118280</td>
+      <td>8401.05028</td>
     </tr>
     <tr>
-      <th>Glun Multipurpose Portable Electronic Digital Weighing Scale Weight Machine (10 Kg - with Back Light)</th>
+      <th>Carrier 1.5 Ton 3 Star Inverter Split AC (Copper,ESTER Dxi, 4-in-1 Flexicool Inverter, 2022 Model,R32,White)</th>
       <td>appliances</td>
-      <td>All Appliances</td>
-      <td>3.8</td>
-      <td>365.0</td>
-      <td>2.435099</td>
-      <td>11.000772</td>
-    </tr>
-    <tr>
-      <th>Tosaa 18 Pcs - 3 Different Size Plastic Food Snack Bag Pouch Clip Sealer Large,Medium,Small Plastic Snack Seal Sealing Bag...</th>
-      <td>appliances</td>
-      <td>All Appliances</td>
-      <td>3.9</td>
-      <td>82.0</td>
-      <td>0.721964</td>
-      <td>1.211431</td>
-    </tr>
-    <tr>
-      <th>Finalize Tap Water Purifier Filter Faucet 6 Layer Carbon Activated Dust Chlorine Remover Water Softener for Drinking Cartr...</th>
-      <td>appliances</td>
-      <td>All Appliances</td>
+      <td>Air Conditioners</td>
       <td>4.1</td>
-      <td>77.0</td>
-      <td>2.557465</td>
-      <td>12.224440</td>
+      <td>630.0</td>
+      <td>4199.916280</td>
+      <td>8254.92388</td>
     </tr>
   </tbody>
 </table>
@@ -15600,7 +15779,8 @@ Tras hacerlo, tenemos la siguiente tabla de porcentajes nulos:</p>
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Procedemos a pasar las tablas a una base de datos SQLite con la siguiente estructura en estrella:</p>
 
 </div>
@@ -15611,7 +15791,8 @@ Tras hacerlo, tenemos la siguiente tabla de porcentajes nulos:</p>
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <img src="images/tablas_hechos.png">
 
 </div>
@@ -15622,20 +15803,47 @@ Tras hacerlo, tenemos la siguiente tabla de porcentajes nulos:</p>
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Lo primero es crear las tablas:</p>
 
 </div>
 </div>
 </div>
-</div><div id="cell-id=868f3bb2" class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput ">
+</div><div id="cell-id=868f3bb2" class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">categorias</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">categorias</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;sub_category&#39;</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">categorias</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;ratings&#39;</span><span class="p">)</span>
+<span class="n">categorias</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;no_of_ratings&#39;</span><span class="p">)</span>
+<span class="n">categorias</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;discount_price&#39;</span><span class="p">)</span>
+<span class="n">categorias</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;actual_price&#39;</span><span class="p">)</span>
+<span class="n">categorias</span> <span class="o">=</span> <span class="n">categorias</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;sub_category&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">aggregate</span><span class="p">({</span><span class="s1">&#39;main_category&#39;</span><span class="p">:</span> <span class="s1">&#39;first&#39;</span><span class="p">})</span>
+<span class="n">categorias</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
 
 <div class="jp-Cell-outputWrapper">
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
 
+
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[8]:</div>
+
+
 
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
 <div>
@@ -15666,23 +15874,23 @@ Tras hacerlo, tenemos la siguiente tabla de porcentajes nulos:</p>
   <tbody>
     <tr>
       <th>Air Conditioners</th>
-      <td>appliancesappliances</td>
+      <td>appliances</td>
     </tr>
     <tr>
       <th>All Appliances</th>
-      <td>appliancesappliancesappliancesappliancesapplia...</td>
+      <td>appliances</td>
     </tr>
     <tr>
       <th>All Car &amp; Motorbike Products</th>
-      <td>car &amp; motorbikecar &amp; motorbikecar &amp; motorbikec...</td>
+      <td>car &amp; motorbike</td>
     </tr>
     <tr>
       <th>All Electronics</th>
-      <td>tv, audio &amp; camerastv, audio &amp; camerastv, audi...</td>
+      <td>tv, audio &amp; cameras</td>
     </tr>
     <tr>
       <th>All Exercise &amp; Fitness</th>
-      <td>sports &amp; fitnesssports &amp; fitnesssports &amp; fitne...</td>
+      <td>sports &amp; fitness</td>
     </tr>
     <tr>
       <th>...</th>
@@ -15690,27 +15898,27 @@ Tras hacerlo, tenemos la siguiente tabla de porcentajes nulos:</p>
     </tr>
     <tr>
       <th>Washing Machines</th>
-      <td>appliancesappliancesappliancesappliancesapplia...</td>
+      <td>appliances</td>
     </tr>
     <tr>
       <th>Watches</th>
-      <td>accessoriesaccessoriesaccessoriesaccessoriesac...</td>
+      <td>accessories</td>
     </tr>
     <tr>
       <th>Western Wear</th>
-      <td>women's clothingwomen's clothingwomen's clothi...</td>
+      <td>women's clothing</td>
     </tr>
     <tr>
       <th>Women's Fashion</th>
-      <td>storesstoresstoresstoresstoresstoresstoresstor...</td>
+      <td>stores</td>
     </tr>
     <tr>
       <th>Yoga</th>
-      <td>sports &amp; fitnesssports &amp; fitnesssports &amp; fitne...</td>
+      <td>sports &amp; fitness</td>
     </tr>
   </tbody>
 </table>
-<p>110 rows × 1 columns</p>
+<p>112 rows × 1 columns</p>
 </div>
 </div>
 
@@ -15720,14 +15928,35 @@ Tras hacerlo, tenemos la siguiente tabla de porcentajes nulos:</p>
 
 </div>
 
-</div><div id="cell-id=7237001c" class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput ">
+</div><div id="cell-id=ed8462ae" class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ventas</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">ventas</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;main_category&#39;</span><span class="p">)</span>
+<span class="n">ventas</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
 
 <div class="jp-Cell-outputWrapper">
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
 
+
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[9]:</div>
+
+
 
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
 <div>
@@ -15765,47 +15994,96 @@ Tras hacerlo, tenemos la siguiente tabla de porcentajes nulos:</p>
   </thead>
   <tbody>
     <tr>
-      <th>AC Stand/Heavy Duty Air Conditioner Outdoor Unit Mounting Bracket</th>
+      <th>Lloyd 1.5 Ton 3 Star Inverter Split Ac (5 In 1 Convertible, Copper, Anti-Viral + Pm 2.5 Filter, 2023 Model, White, Gls18I3...</th>
       <td>Air Conditioners</td>
-      <td>5.0</td>
-      <td>2.0</td>
-      <td>7.329769</td>
-      <td>12.224440</td>
+      <td>4.2</td>
+      <td>2255.0</td>
+      <td>4018.354228</td>
+      <td>7183.330280</td>
     </tr>
     <tr>
-      <th>RISARYA H20R1203 IGBT 1PCS POWER TRANSISTOR 20A 1200V REVERSE CONDUCTING HEATING AND WIDELY USED IN INDUCTION COOKER T0247...</th>
+      <th>LG 1.5 Ton 5 Star AI DUAL Inverter Split AC (Copper, Super Convertible 6-in-1 Cooling, HD Filter with Anti-Virus Protectio...</th>
+      <td>Air Conditioners</td>
+      <td>4.2</td>
+      <td>2948.0</td>
+      <td>5661.180280</td>
+      <td>9253.454280</td>
+    </tr>
+    <tr>
+      <th>LG 1 Ton 4 Star Ai Dual Inverter Split Ac (Copper, Super Convertible 6-In-1 Cooling, Hd Filter With Anti Virus Protection,...</th>
+      <td>Air Conditioners</td>
+      <td>4.2</td>
+      <td>1206.0</td>
+      <td>4199.916280</td>
+      <td>7548.646280</td>
+    </tr>
+    <tr>
+      <th>LG 1.5 Ton 3 Star AI DUAL Inverter Split AC (Copper, Super Convertible 6-in-1 Cooling, HD Filter with Anti-Virus Protectio...</th>
       <td>Air Conditioners</td>
       <td>4.0</td>
-      <td>4.0</td>
-      <td>2.435099</td>
-      <td>6.106102</td>
+      <td>69.0</td>
+      <td>4626.118280</td>
+      <td>8401.050280</td>
     </tr>
     <tr>
-      <th>Glun Multipurpose Portable Electronic Digital Weighing Scale Weight Machine (10 Kg - with Back Light)</th>
-      <td>All Appliances</td>
-      <td>3.8</td>
-      <td>365.0</td>
-      <td>2.435099</td>
-      <td>11.000772</td>
-    </tr>
-    <tr>
-      <th>Tosaa 18 Pcs - 3 Different Size Plastic Food Snack Bag Pouch Clip Sealer Large,Medium,Small Plastic Snack Seal Sealing Bag...</th>
-      <td>All Appliances</td>
-      <td>3.9</td>
-      <td>82.0</td>
-      <td>0.721964</td>
-      <td>1.211431</td>
-    </tr>
-    <tr>
-      <th>Finalize Tap Water Purifier Filter Faucet 6 Layer Carbon Activated Dust Chlorine Remover Water Softener for Drinking Cartr...</th>
-      <td>All Appliances</td>
+      <th>Carrier 1.5 Ton 3 Star Inverter Split AC (Copper,ESTER Dxi, 4-in-1 Flexicool Inverter, 2022 Model,R32,White)</th>
+      <td>Air Conditioners</td>
       <td>4.1</td>
-      <td>77.0</td>
-      <td>2.557465</td>
-      <td>12.224440</td>
+      <td>630.0</td>
+      <td>4199.916280</td>
+      <td>8254.923880</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>BE SAVAGE Pink I Purple You Hoodie Suitable for Summer &amp; Winter for Men</th>
+      <td>Yoga</td>
+      <td>4.6</td>
+      <td>6.0</td>
+      <td>86.579892</td>
+      <td>121.650228</td>
+    </tr>
+    <tr>
+      <th>Adidas Regular Fit Men's Track Tops</th>
+      <td>Yoga</td>
+      <td>3.2</td>
+      <td>9.0</td>
+      <td>419.991628</td>
+      <td>560.029428</td>
+    </tr>
+    <tr>
+      <th>Redwolf Noice Toit Smort - Hoodie (Black)</th>
+      <td>Yoga</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>146.004628</td>
+      <td>243.422228</td>
+    </tr>
+    <tr>
+      <th>Redwolf Schrute Farms B&amp;B - Hoodie (Navy Blue)</th>
+      <td>Yoga</td>
+      <td>4.0</td>
+      <td>1.0</td>
+      <td>146.004628</td>
+      <td>243.422228</td>
+    </tr>
+    <tr>
+      <th>Mothercare Printed Cotton Elastane Girls Infant Leggings (S21VF342MU-P)</th>
+      <td>Yoga</td>
+      <td>4.6</td>
+      <td>5.0</td>
+      <td>126.521108</td>
+      <td>158.181828</td>
     </tr>
   </tbody>
 </table>
+<p>334963 rows × 5 columns</p>
 </div>
 </div>
 
@@ -15820,12 +16098,246 @@ Tras hacerlo, tenemos la siguiente tabla de porcentajes nulos:</p>
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h1 id="Ya-tenemos-los-datos-bien-estructurados,-solamente-nos-queda-a%C3%B1adirlos-a-una-base-de-datos:">Ya tenemos los datos bien estructurados, solamente nos queda a&#241;adirlos a una base de datos:<a class="anchor-link" href="#Ya-tenemos-los-datos-bien-estructurados,-solamente-nos-queda-a%C3%B1adirlos-a-una-base-de-datos:">&#182;</a></h1>
 </div>
 </div>
 </div>
-</div><div id="cell-id=d3ee893e" class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs jp-mod-noInput ">
+</div><div id="cell-id=d3ee893e" class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">sqlite3</span>
+
+<span class="c1"># Creamos una conexión a la base de datos SQLite</span>
+<span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;hechos.db&#39;</span><span class="p">)</span>
+
+<span class="c1"># Pasamos los DataFrames a la base de datos</span>
+<span class="n">categorias</span><span class="o">.</span><span class="n">to_sql</span><span class="p">(</span><span class="s1">&#39;categorias&#39;</span><span class="p">,</span> <span class="n">conn</span><span class="p">,</span> <span class="n">if_exists</span><span class="o">=</span><span class="s1">&#39;replace&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">ventas</span><span class="o">.</span><span class="n">to_sql</span><span class="p">(</span><span class="s1">&#39;ventas&#39;</span><span class="p">,</span> <span class="n">conn</span><span class="p">,</span> <span class="n">if_exists</span><span class="o">=</span><span class="s1">&#39;replace&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> 
+           <span class="n">dtype</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;INT&#39;</span><span class="p">,</span> <span class="s1">&#39;sub_category&#39;</span><span class="p">:</span> <span class="s1">&#39;TEXT&#39;</span><span class="p">,</span>
+                  <span class="s1">&#39;FOREIGN KEY(subcategory)&#39;</span><span class="p">:</span> <span class="s1">&#39;REFERENCES categorias(subcategorias)&#39;</span><span class="p">,</span>
+                  <span class="s1">&#39;ratings&#39;</span><span class="p">:</span> <span class="s1">&#39;FLOAT&#39;</span><span class="p">,</span> <span class="s1">&#39;no_of_ratings&#39;</span><span class="p">:</span> <span class="s1">&#39;FLOAT&#39;</span><span class="p">,</span>
+                  <span class="s1">&#39;discount_price&#39;</span><span class="p">:</span> <span class="s1">&#39;FLOAT&#39;</span><span class="p">,</span> <span class="s1">&#39;actual_price&#39;</span><span class="p">:</span> <span class="s1">&#39;FLOAT&#39;</span><span class="p">})</span>
+
+<span class="c1"># Cerramos la conexión a la base de datos</span>
+<span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div>
+<div id="cell-id=83a7d7b3" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>También podemos crear archivos csv para estas dos tablas por si las necesitamos en algún momento</p>
+
+</div>
+</div>
+</div>
+</div><div id="cell-id=4148a9b2" class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">categorias</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;categorias.csv&#39;</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;ventas.csv&#39;</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div id="cell-id=8fc60609" class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[12]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>main_category</th>
+      <th>sub_category</th>
+      <th>ratings</th>
+      <th>no_of_ratings</th>
+      <th>discount_price</th>
+      <th>actual_price</th>
+    </tr>
+    <tr>
+      <th>name</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Lloyd 1.5 Ton 3 Star Inverter Split Ac (5 In 1 Convertible, Copper, Anti-Viral + Pm 2.5 Filter, 2023 Model, White, Gls18I3...</th>
+      <td>appliances</td>
+      <td>Air Conditioners</td>
+      <td>4.2</td>
+      <td>2255.0</td>
+      <td>4018.354228</td>
+      <td>7183.330280</td>
+    </tr>
+    <tr>
+      <th>LG 1.5 Ton 5 Star AI DUAL Inverter Split AC (Copper, Super Convertible 6-in-1 Cooling, HD Filter with Anti-Virus Protectio...</th>
+      <td>appliances</td>
+      <td>Air Conditioners</td>
+      <td>4.2</td>
+      <td>2948.0</td>
+      <td>5661.180280</td>
+      <td>9253.454280</td>
+    </tr>
+    <tr>
+      <th>LG 1 Ton 4 Star Ai Dual Inverter Split Ac (Copper, Super Convertible 6-In-1 Cooling, Hd Filter With Anti Virus Protection,...</th>
+      <td>appliances</td>
+      <td>Air Conditioners</td>
+      <td>4.2</td>
+      <td>1206.0</td>
+      <td>4199.916280</td>
+      <td>7548.646280</td>
+    </tr>
+    <tr>
+      <th>LG 1.5 Ton 3 Star AI DUAL Inverter Split AC (Copper, Super Convertible 6-in-1 Cooling, HD Filter with Anti-Virus Protectio...</th>
+      <td>appliances</td>
+      <td>Air Conditioners</td>
+      <td>4.0</td>
+      <td>69.0</td>
+      <td>4626.118280</td>
+      <td>8401.050280</td>
+    </tr>
+    <tr>
+      <th>Carrier 1.5 Ton 3 Star Inverter Split AC (Copper,ESTER Dxi, 4-in-1 Flexicool Inverter, 2022 Model,R32,White)</th>
+      <td>appliances</td>
+      <td>Air Conditioners</td>
+      <td>4.1</td>
+      <td>630.0</td>
+      <td>4199.916280</td>
+      <td>8254.923880</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>BE SAVAGE Pink I Purple You Hoodie Suitable for Summer &amp; Winter for Men</th>
+      <td>sports &amp; fitness</td>
+      <td>Yoga</td>
+      <td>4.6</td>
+      <td>6.0</td>
+      <td>86.579892</td>
+      <td>121.650228</td>
+    </tr>
+    <tr>
+      <th>Adidas Regular Fit Men's Track Tops</th>
+      <td>sports &amp; fitness</td>
+      <td>Yoga</td>
+      <td>3.2</td>
+      <td>9.0</td>
+      <td>419.991628</td>
+      <td>560.029428</td>
+    </tr>
+    <tr>
+      <th>Redwolf Noice Toit Smort - Hoodie (Black)</th>
+      <td>sports &amp; fitness</td>
+      <td>Yoga</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>146.004628</td>
+      <td>243.422228</td>
+    </tr>
+    <tr>
+      <th>Redwolf Schrute Farms B&amp;B - Hoodie (Navy Blue)</th>
+      <td>sports &amp; fitness</td>
+      <td>Yoga</td>
+      <td>4.0</td>
+      <td>1.0</td>
+      <td>146.004628</td>
+      <td>243.422228</td>
+    </tr>
+    <tr>
+      <th>Mothercare Printed Cotton Elastane Girls Infant Leggings (S21VF342MU-P)</th>
+      <td>sports &amp; fitness</td>
+      <td>Yoga</td>
+      <td>4.6</td>
+      <td>5.0</td>
+      <td>126.521108</td>
+      <td>158.181828</td>
+    </tr>
+  </tbody>
+</table>
+<p>334963 rows × 6 columns</p>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 </div>
 </body>
